@@ -1,0 +1,31 @@
+*{margin:0;padding:0}
+body{font-family:"Microsoft YaHei";}
+input,button{word-wrap:break-word;font-family:"Microsoft YaHei";}
+img{border:0;}
+
+.f_l{float:left;}
+.qfd{clear:both;}
+
+.l_m10{margin-left:10px;}
+
+.content_bg{position:relative;width:100%;height:1080px;text-align:center;
+	background:url(../images/bg.jpg) center no-repeat;background-size:cover;}
+.head_logo{margin:0 auto;width:600px;padding-top: 8%;}
+.login_con{position:absolute;left:50%;top:40%;margin-left:-360px;margin-top:-210px;width:720px;height:420px;
+	background:url(../images/form_bg.png) no-repeat}
+.login_form{margin-top:75px;}
+.login_inpWrap{margin:25px auto;width:400px;height:60px;border:1px #bdbdbd solid;border-radius:4px;}
+.login_picBox{width:13%;}
+.login_user_pic{margin:12px auto;}
+.login_user_pic img{width:33px;height:37px;}
+.login_textBox{width:87%;text-align:left;}
+.login_textBox input{width:99.9%;height:60px;line-height:60px;font-size:18px;color:#666666;border:none;
+	_width:98.9%;_line-height:65px;_border:1px #fff solid;}
+.login_pwd_pic{margin:11px auto;}
+.login_pwd_pic img{width:28px;height:38px;}
+.login_btnWrap{margin-top:50px;}
+.login_btn{width:200px;height:60px;line-height:60px;font-size:24px;color:#fff;text-align:center;
+	background-color:#ef5811;border:none;border-radius:5px;}
+.reg_btn{width:200px;height:60px;line-height:60px;font-size:24px;color:#fff;text-align:center;
+	background-color:blue;border:none;border-radius:5px;}
+

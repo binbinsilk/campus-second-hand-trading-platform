@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	  <!-- 若干个重要常量配置 -->
+    <!-- 指定struts2中的action由spirng容器创建 -->
+	<constant name="struts.objectFactory" value="spring" />
+	<!-- 默认视图主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 指定web应用默认编码集 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- 指定需要struts2处理请求后缀，该属性默认值是action -->
+	<constant name="struts.action.extension" value="do"/>
+	<!-- 开发模式下使用，这样可以打印出更详细的错误信息 -->
+	<constant name="struts.devMode" value="true" />
+	
+	<package name="main" namespace="/" extends="json-default">
+		<interceptors>
+			<!-- 加载到拦截器栈 -->
+			<interceptor-stack name="myAuthorityStack">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<!--struts的默认拦截器-->
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myAuthorityStack" />
+	<action name="toIndex" class="IndexAction" method="toIndex">
+		<result name="main">/WEB-INF/pages/index.jsp</result>
+	</action>
+	<action name="index" class="IndexAction">
+		<result name="main">/index.jsp</result>
+		<result name="toUs">/WEB-INF/pages/about-us.jsp</result>
+		<result name="input">/login.jsp</result>
+		<result name="reg">/reg.jsp</result>
+	</action>
+					 
+	<action name="mall" class="MallAction">
+		<result name="toMall">/WEB-INF/pages/mall.jsp</result>
+		<result name="toCart">/WEB-INF/pages/cart.jsp</result>
+		<result name="toPublish">/WEB-INF/pages/publish.jsp</result>
+		<result name="login">/login.jsp</result>
+		<result name="success">/index.jsp</result>
+	</action>
+	
+	</package>
+</struts>
